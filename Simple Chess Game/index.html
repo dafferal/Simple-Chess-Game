@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chess Game</title>
+        <link rel="stylesheet" href="css/styles.css">
+			
+        <link rel="stylesheet"
+        href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+        integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+        crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+            crossorigin="anonymous">
+        </script>
+
+        <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+            integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+            crossorigin="anonymous">
+        </script>
+			
+        <script defer src="js/chess.js"></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+        <div id="myBoard" style="width: 600px"></div>
+        <div class="chess-sidebar">
+            <div class="chess-sidebar-text">
+                <h2>Game Information</h2>
+                <p class="checkStatus"></p>
+                <p>Player's turn: <span class="currentPlay"></span></p>
+                <p>Move count: <span class="moveCount"></span></p>
+                <p>PGN: <p class="gamePGN"></p></p>
+                <p>FEN: <p class="gameFEN"></p></p>
+                <label for="depth-dropdown">Select depth:</label>
+                <select id="depth-dropdown">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="chess-sidebar-buttons">
+                <button type="button" id="reset">reset</button>
+                <button type="button" id="undo">undo</button>
+                <button type="button" id="redo">redo</button>
+                <button type="button" id="aiVSai">Play the AI against itself</button>
+            </div>
+          </div>
+    </body>
+</html>
